@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+
+/* Color scheme: https://coolors.co/21897e-3ba99c-69d1c5-7ebce6-8980f5 */
+:root {
+  --dark-green: #21897e;
+  --green: #3ba99c;
+  --light-green: #69d1c5;
+  --light-blue: #7ebce6;
+  --purple: #8980f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+aside {
+  align-items: center;
+  border-right: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  max-width: 100%;
+}
+
+aside,
+main {
+  margin: 0 15px;
+  padding: 0 15px;
+}
+
+body {
+  align-items: center;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+  margin: 0;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+body,
+button,
+h1 {
+  font-family: 'Oswald', sans-serif;
+}
+
+button {
+  background-color: var(--green);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px;
+  min-height: 50px;
+  width: 100%;
+}
+
+button:active {
+  background-color: var(--light-blue);
+}
+
+button:hover {
+  background-color: var(--light-green);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
+button:focus {
+  outline: none;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+nav {
+  align-items: center;
+  background-color: var(--dark-green);
+  border-top: 5px solid black;
+  color: white;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 400;
+  width: 100vw;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+  max-width: 800px;
+  width: 80vw;
+}
+
+/* CLASSES */
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  max-width: 1300px;
+  padding: 10px;
+  width: 100%;
+}
+
+.person,
+.table-title,
+.total {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.table-title {
+  border-bottom: 2px solid black;
+  width: 600px;
+}
+
+.total {
+  border-top: 1px solid black;
+  margin: 1em 0;
+  padding: 1em 0;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 1000px) {
+  aside,
+  main {
+    border: none;
+  }
+
+  h1 {
+    width: 80vw;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .main {
+    margin-bottom: 1em;
+  }
+
+  .person,
+  .table-title,
+  .total {
+    font-size: 18px;
+  }
+
+  .table-title,
+  .total {
+    width: 80vw;
+  }
+}
